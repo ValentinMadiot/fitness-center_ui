@@ -248,6 +248,9 @@ img {
 }
 
 /* Active Link */
+.active-link {
+  color: var(--first-color);
+}
 
 /*=============== HOME ===============*/
 .home {
@@ -783,10 +786,43 @@ img {
 }
 
 /*=============== SCROLL BAR ===============*/
+::-webkit-scrollbar {
+  width: 0.6rem;
+  border-radius: 0.5rem;
+  background-color: #272825;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #41423d;
+  border-radius: 0.5rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #5b5d56;
+}
 
 /*=============== SCROLL UP ===============*/
+.scrollup {
+  position: fixed;
+  right: 1rem;
+  bottom: -30%;
+  background-color: var(--first-color);
+  display: inline-flex;
+  padding: 0.35rem;
+  color: var(--title-color-black);
+  font-size: 1.25rem;
+  z-index: var(--z-tooltip);
+  transition: 0.3s;
+}
+
+.scrollup:hover {
+  transform: translateY(-0.25rem);
+}
 
 /* Show Scroll Up*/
+.show-scroll {
+  bottom: 3rem;
+}
 
 /*=============== BREAKPOINTS ===============*/
 /* For Small Devices */
