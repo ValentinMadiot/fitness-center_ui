@@ -153,8 +153,93 @@ img {
 }
 
 /*=============== HEADER & NAV ===============*/
+.header {
+  width: 100%;
+  background-color: transparent;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: var(--z-fixed);
+  transition: background 0.3s;
+}
+
+.nav {
+  height: var(--header-height);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav__logo,
+.nav__toggle {
+  color: var(--title-color);
+  display: flex;
+}
+
+.nav__logo {
+  align-items: center;
+  column-gap: 0.5rem;
+  font-weight: var(--font-bold);
+}
+
+.nav__logo img {
+  width: 1.25rem;
+}
+
+.nav__toggle {
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1023px) {
+  .nav__menu {
+    position: fixed;
+    background-color: rgba(18, 23, 23, 0.8);
+    backdrop-filter: blur(32px);
+    -webkit-backdrop-filter: blur(32px);
+    top: 0;
+    right: -100%;
+    width: 80%;
+    height: 100%;
+    transition: right 0.3s;
+    border-left: 2px solid var(--first-color-gray);
+  }
+}
+
+.nav__list {
+  padding: 5rem 0 0 3rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 2.5rem;
+}
+
+.nav__link {
+  color: var(--title-color);
+  transition: color 0.3s;
+}
+
+.nav__link:hover {
+  color: var(--first-color);
+}
+
+.nav__close {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  font-size: 1.5rem;
+  color: var(--title-color);
+  cursor: pointer;
+}
+
+.nav .nav__button {
+  background-color: var(--title-color);
+  border: none;
+}
 
 /* Show Menu */
+.show-menu {
+  right: 0;
+}
 
 /* Change Background Header */
 
@@ -163,6 +248,20 @@ img {
 /*=============== HOME ===============*/
 
 /*=============== BUTTON ===============*/
+.button {
+  display: inline-block;
+  background-color: var(--first-color);
+  padding: 18px 32px;
+  border: 2px solid var(--first-color-light);
+  color: var(--title-color-black);
+  font-weight: var(--font-bold);
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.button:hover {
+  background-color: var(--first-color-alt);
+}
 
 /*=============== LOGOS ===============*/
 
