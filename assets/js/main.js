@@ -99,5 +99,61 @@ const calculateBmi = (e) => {
 calculateForm.addEventListener("submit", calculateBmi);
 
 /*=============== EMAIL JS ===============*/
+const contactForm = document.getElementById("contact-form"),
+  contactMessage = document.getElementById("contact-message"),
+  contactUser = document.getElementById("contact-user");
+const validateEmail = (email) => {
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+};
+
+const sendEmail = (e) => {
+  e.preventDefault();
+
+  // Check if the field has a value
+  if (contactUser.value === "" || !validateEmail(contactUser.value)) {
+    // Add and remove color
+    contactMessage.classList.remove("color-green");
+    contactMessage.classList.add("color-red");
+
+    // Show message
+    contactMessage.textContent = "Veuillez entrer un e-mail valide ☝";
+
+    // Remove message three seconds
+    setTimeout(() => {
+      contactMessage.textContent = "";
+    }, 3000);
+  } else {
+    // serviceID - templateID - #form - publicKey
+    emailjs
+      .sendForm(
+        "service_odl66fp",
+        "template_56ss845",
+        "#contact-form",
+        "S3ulpaZlPJXyVWawk"
+      )
+      .then(
+        () => {
+          // Show message and add color
+          contactMessage.classList.add("color-green");
+          contactMessage.textContent = "Merci pour votre inscription 🎉";
+
+          // Remove message after three seconds
+          setTimeout(() => {
+            contactMessage.textContent = "";
+          }, 3000);
+        },
+        (error) => {
+          alert(
+            "Oups ! Une erreur est survenue lors de l’envoi. Réessayez plus tard.",
+            error
+          );
+        }
+      );
+
+    // To clear the input field
+    contactUser.value = "";
+  }
+};
+contactForm.addEventListener("submit", sendEmail);
 
 /*=============== SCROLL REVEAL ANIMATION ===============*/

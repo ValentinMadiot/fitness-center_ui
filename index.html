@@ -341,7 +341,7 @@
                     alt="forfait elite"
                     class="pricing__img" />
                 </div>
-                <h1 class="pricing__title">FORFAIT ELITE</h1>
+                <h1 class="pricing__title">FORFAIT ÉLITE</h1>
                 <h2 class="pricing__number">420 €</h2>
               </header>
 
@@ -431,7 +431,90 @@
     </main>
 
     <!--==================== FOOTER ====================-->
-    <footer class="footer section" id="footer"></footer>
+    <footer class="footer section" id="footer">
+      <div class="footer__container container grid">
+        <div>
+          <a href="#" class="footer__logo">
+            <img src="assets/img/logo-nav.png" alt="logo" /> Fit'Essence
+          </a>
+          <p class="footer__description">
+            Inscris-toi pour recevoir <br />
+            nos dernières actualités.
+          </p>
+
+          <form action="" class="footer__form" id="contact-form">
+            <input
+              type="email"
+              name="user_email"
+              placeholder="Email"
+              class="footer__input"
+              id="contact-user" />
+            <button type="submit" class="button">S’abonner</button>
+          </form>
+
+          <p class="footer__message" id="contact-message"></p>
+        </div>
+
+        <div class="footer__content">
+          <div>
+            <h3 class="footer__title">SERVICES</h3>
+            <ul class="footer__links">
+              <li><a href="#" class="footer__link">Muscles Tendus</a></li>
+              <li><a href="#" class="footer__link">Cardio</a></li>
+              <li><a href="#" class="footer__link">Yoga Basique</a></li>
+              <li><a href="#" class="footer__link">Haltérophilie</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="footer__title">TARIFS</h3>
+            <ul class="footer__links">
+              <li><a href="#" class="footer__link">Essentiel</a></li>
+              <li><a href="#" class="footer__link">Avancé</a></li>
+              <li><a href="#" class="footer__link">Élite</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="footer__title">ENTREPRISE</h3>
+            <ul class="footer__links">
+              <li><a href="#" class="footer__link">À Propos</a></li>
+              <li><a href="#" class="footer__link">Carrières</a></li>
+              <li><a href="#" class="footer__link">Clients</a></li>
+              <li><a href="#" class="footer__link">Partenaires</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="footer__group">
+          <ul class="footer__social">
+            <a
+              href="https://www.facebook.com/"
+              target="_blank"
+              class="footer__social-link">
+              <i class="ri-facebook-circle-fill"></i>
+            </a>
+            <a
+              href="https://twitter.com/"
+              target="_blank"
+              class="footer__social-link">
+              <i class="ri-twitter-fill"></i>
+            </a>
+            <a
+              href="https://www.instagram.com/"
+              target="_blank"
+              class="footer__social-link">
+              <i class="ri-instagram-line"></i>
+            </a>
+          </ul>
+          <span class="footer__copy">
+            &#169; Tous droits réservés | Fit'Essence
+          </span>
+        </div>
+      </div>
+    </footer>
 
     <!--========== SCROLL UP ==========-->
 
@@ -439,6 +522,14 @@
     <script src=""></script>
 
     <!--=============== EMAIL JS ===============-->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+      (function () {
+        emailjs.init("S3ulpaZlPJXyVWawk");
+      })();
+    </script>
 
     <!--=============== MAIN JS ===============-->
     <script src="assets/js/main.js"></script>
