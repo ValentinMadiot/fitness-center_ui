@@ -384,7 +384,50 @@
       </section>
 
       <!--==================== CALCULATE ====================-->
-      <section class="calculate section"></section>
+      <section class="calculate section">
+        <div class="calculate__container container grid">
+          <div class="calculate__content">
+            <div class="section__titles">
+              <h1 class="section__title-border">CALCULER</h1>
+              <h1 class="section__title">VOTRE IMC</h1>
+            </div>
+
+            <p class="calculate__description">
+              Le calculateur d’IMC (Indice de Masse Corporelle) évalue votre
+              indice à partir de votre taille et de votre poids.
+            </p>
+
+            <form action="" class="calculate__form" id="calculate-form">
+              <div class="calculate__box">
+                <input
+                  type="number"
+                  placeholder="Taille"
+                  class="calculate__input"
+                  id="calculate-cm" />
+                <label class="calculate__label">cm</label>
+              </div>
+              <div class="calculate__box">
+                <input
+                  type="number"
+                  placeholder="Poids"
+                  class="calculate__input"
+                  id="calculate-kg" />
+                <label class="calculate__label">kg</label>
+              </div>
+
+              <button type="submit" class="button button__flex">
+                Calculer <i class="ri-arrow-right-line"></i>
+              </button>
+            </form>
+
+            <p class="calculate__message" id="calculate-message"></p>
+          </div>
+          <img
+            src="assets/img/calculate-img.png"
+            alt="calcul IMC"
+            class="calculate__img" />
+        </div>
+      </section>
     </main>
 
     <!--==================== FOOTER ====================-->
